@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import laptop from '../assets/laptop.jpg';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Aos from 'aos';
 const Analytics = () => {
+    useEffect(() => {
+        Aos.init();
+    },[]);
     return (
-        <div className='w-full bg-white py-16 px-4'>
+        <div className='w-full bg-white py-16 px-4' data-aos="fade-up" data-aos-duration="1500">
             <div className='max-w-[1240px] m-auto grid md:grid-cols-2'>
                 <img className='w-[500px] mx-auto my-4' src={laptop} alt='/' />
                 <div className='flex flex-col justify-center'>

@@ -1,8 +1,12 @@
-import React from 'react';
-
+import React, {useEffect} from 'react';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Aos from 'aos';
 const NewsLetter = () => {
+    useEffect(() => {
+        Aos.init();
+    },[]);
     return (
-        <div className='w-full py-16 text-white px-4'>
+        <div className='w-full py-16 text-white px-4' data-aos="fade-right" data-aos-duration="1500">
             <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3' >
                 <div className='lg:col-span-2 my-5'>
                     <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Want tips & tricks to optimize your flow ?</h1>

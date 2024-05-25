@@ -1,8 +1,13 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { ReactTyped } from "react-typed";
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Aos from 'aos';
 const Hero = () => {
+    useEffect(() => {
+        Aos.init();
+    },[]);
     return (
-        <div className='text-white'>
+        <div className='text-white' data-aos="fade-up" data-aos-duration="1300">
             <div className='max-w[800px] mt-[-40px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
                 <p className='text-[#00df9a] font-bold p-2 text-l'>GROWING WHITH DATA ANALYTICS</p>
                 <h1 className='md:text-6xl sm:text-5xl text-5xl font-bold md:py-2'>Grow With Data.</h1>
